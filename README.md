@@ -16,3 +16,9 @@ Example for sheet 1 with 5 tasks:
 git add sheet_01
 git commit -am "empty sheet 1"
 ```
+
+## Create `.pdf`
+
+```
+cd sheet_01 && make
+```
