@@ -1,4 +1,4 @@
-all: build/assignment.pdf
+all: build/assignment_01.pdf
 
 
 TeXOptions = -xelatex \
@@ -6,8 +6,8 @@ TeXOptions = -xelatex \
 			 -halt-on-error \
 			 -output-directory=build
 
-build/assignment.pdf : FORCE | build
-	latexmk $(TeXOptions) assignment.tex
+build/assignment_01.pdf : FORCE | build
+	latexmk $(TeXOptions) assignment_01.tex
 
 FORCE:
 
