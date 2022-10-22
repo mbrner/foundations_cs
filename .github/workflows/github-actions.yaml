@@ -9,9 +9,10 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: "sheet_01/assignment_01.tex"
-          glob_root_file: false
+          root_file: "assignment_*.tex"
+          glob_root_file: true
           latexmk_use_xelatex: true
+          work_in_root_file_dir: true
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
