@@ -10,7 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: "sheet_01/assignment_01.tex"
-          glob_root_file: true
+          glob_root_file: false
           latexmk_use_xelatex: true
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
