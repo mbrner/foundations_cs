@@ -1,11 +1,16 @@
-\question \textbf{Title}
+\question \textbf{Landau Symbols}
 
 \begin{parts}
-\part Question % optional task text
-
+\part Show the following: \(∀k, l ∈ Z, k > l : nl = o(n^k)\)
 
 \begin{solution}
-Here goes the solution
+
+Def.: \(o(f) := {g: \N \rightArrow \R_+: \lim\limits_{n \to \infty}\frac{g(n)}{f(n)}=0}\)
+
+Let \(f(n)=n^k\), \(g(n)=n^l\).
+
+\(\lim\limits_{n \to \infty}\frac{g(n)}{f(n)}=\lim\limits_{n \to \infty}n^{l-k}=\lim\limits_{n \to \infty}n^{-(-l+k)}=\lim\limits_{n \to \infty}\frac{1}{n^{k-l}} \rightArrow 0\) since n^{k-l} > 1
+
 \end{solution}
 
 
