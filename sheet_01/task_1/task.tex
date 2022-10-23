@@ -1,13 +1,21 @@
 \question \textbf{Landau Symbols}
 
-
+Order the class of functions in ascending order. (From slowest growing in time complexity
+to fastest growing)
+\begin{equation}
+[O(c_2^n), O(n), O(n^{c_1}), O(n^{c_2}), O(1), O(\log n)]
+\end{equation}
 
 \begin{solution}
-\begin{equation*}
-O\left(1\right) < O\left(\log n\right) < O\left(n^{c_1}\right) < O\left(n\right) < O\left(n^{c_2}\right) < O\left(c_2^n\right)\\
-\text{with} 0 < c_1 < 1\qquad \text{and} 1 < c_2
-\end{equation*}
+\begin{enumerate}
+\item \(O(1)\)
+\item \(O(\log n)\)
+\item \(O(n^{c_1})\) where \(0 < c_1 < 1\)
+\item \(O(n)\)
+\item \(O(n^{c_2})\) where \(1 < c_2\)
+\item \(O(c_2^n)\) where \(1 < c_2\)
+\end{enumerate}
+
+\url{https://www.geogebra.org/graphing/gjfxxssu}
 \end{solution}
 
-
-% For tasks without simply remove the \begin{parts}...\part...\end{parts} commands
