@@ -3,30 +3,38 @@
 \begin{parts}
 \part Show the following: \(\forall k, l \in \mathbb{Z}, k > l : n^l = o(n^k)\)
 
-
 \begin{solution}
 
 \textbf{Def.:} \(o(f) := \{g: \mathbb{N} \rightarrow \mathbb{R}_+: \lim\limits_{n \to \infty}\frac{g(n)}{f(n)}=0\}\)
 
-
 Let \(f(n)=n^k\), \(g(n)=n^l\).
 
+\[\lim\limits_{n \to \infty}\frac{g(n)}{f(n)}=\lim\limits_{n \to \infty}\frac{n^l}{n^k}=\lim\limits_{n \to \infty}n^{l-k}=\lim\limits_{n \to \infty}n^{-(-l+k)}=\lim\limits_{n \to \infty}\frac{1}{n^{k-l}} \rightarrow 0\]
 
-\(\lim\limits_{n \to \infty}\frac{g(n)}{f(n)}=\lim\limits_{n \to \infty}\frac{n^l}{n^k}=\lim\limits_{n \to \infty}n^{l-k}=\lim\limits_{n \to \infty}n^{-(-l+k)}=\lim\limits_{n \to \infty}\frac{1}{n^{k-l}} \rightarrow 0\) 
-
-since \(n^{k-l} > 1\)
+since \(n^{k-l} > 1 \Rightarrow n^l \in o(n^k)\)
 
 \end{solution}
 
 
 \part Show the following: \(\forall k, l \in \mathbb{N}, k > l : n^k + n^l = \Theta(n^k)\)
 
+\begin{solution}
+\textbf{Def.:} \(\Theta := \{g: \mathbb{N} \rightarrow \mathbb{R}_+: g \in O(f) \wedge g \in \Omega(f)\}\)
 
-% \begin{solution}
-% Here goes the solution
-% \end{solution}
+\begin{enumerate}
+\item \(O(f) := \{g: \mathbb{N} \rightarrow \mathbb{R}_+: \exists c \in \mathbb{R} > 0, n_0 \in \mathbb{N}: \forall n \in \mathbb{N}, n \geq n_0: g(n) \leq c \cdot f(n)\}\)
 
-% \end{parts}
+Let \(f(n)=n^k\), \(g(n)=n^k+n^l\), \(c=1\). Then
+
+\(n^k + n^l \leq 1 \cdot n^k \Leftrightarrow n^l \leq 0 \Rightarrow n^k + n^l \leq n^k \Rightarrow n^k + n^l \in O(n^k)\).
+
+\item \(\Omega(f) := \{g: \mathbb{N} \rightarrow \mathbb{R}_+: \exists c \in \mathbb{R} > 0, n_0 \in \mathbb{N}: \forall n \in \mathbb{N}, n \geq n_0: g(n) \geq c \cdot f(n)\}\)
+
+Let \(f(n)=n^k\), \(g(n)=n^k+n^l\), \(c=1\). Then
+
+\(n^k + n^l \geq 1 \cdot n^k \Leftrightarrow n^l \geq 0 \Rightarrow n^k + n^l \geq n^k \Rightarrow n^k + n^l \in O(n^k)\).
+\end{enumerate}
+\end{solution}
 
 
 % \part Show the following: \(f = O(2^n) \Leftrightarrow f = 2^{O(n)}\)
