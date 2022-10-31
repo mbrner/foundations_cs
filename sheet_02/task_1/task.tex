@@ -1,22 +1,24 @@
-\question \textbf{Title}
+\question \textbf{Landau Symbols}
 
 \begin{parts}
-\part Question % optional task text
 
-
-\begin{solution}
-Here goes the solution
-\end{solution}
-
-
-\part Question% optional task text
-
+Order the class of functions in ascending order. (From slowest growing in time complexity
+to fastest growing)
+\begin{equation}
+O(c_2^n), O(n), O(n^{c_1}), O(n^{c_2}), O(1), O(\log n), O(n \log n)
+\end{equation}
+where \(c_1\), \(c_2\) are constants that satisfy 0 < \(c_1\) < 1 and 1 \(c_2\).
 
 \begin{solution}
-Here goes the solution
+\begin{enumerate}
+\item \(O(1)\)
+\item \(O(\log n)\)
+\item \(O(n^{c_1})\) where \(0 < c_1 < 1\)
+\item \(O(n)\)
+\item \(O(n \log n)\)
+\item \(O(n^{c_2})\) where \(1 < c_2\)
+\item \(O(c_2^n)\) where \(1 < c_2\)
+\end{enumerate}
 \end{solution}
 
 \end{parts}
-
-
-% For tasks without simply remove the \begin{parts}...\part...\end{parts} commands
