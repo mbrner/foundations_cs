@@ -1,5 +1,7 @@
 # Foundations in Computer Science WS22/23
 
+[![Build LaTeX document](https://github.com/mbrner/foundations_cs/actions/workflows/github-actions.yaml/badge.svg)](https://github.com/mbrner/foundations_cs/actions/workflows/github-actions.yaml)
+
 [Whiteboard](https://mycampus.imp.fu-berlin.de/portal/site/b0ec8038-6d1b-4daa-af0a-77d606d845ed)
 [Assignments](https://mycampus.imp.fu-berlin.de/portal/site/b0ec8038-6d1b-4daa-af0a-77d606d845ed/tool/20cc3730-a53b-44cb-8c07-838020439aae)
 
