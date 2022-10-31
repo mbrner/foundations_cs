@@ -11,7 +11,7 @@ Let \(f(n)=n^k\), \(g(n)=n^l\).
 
 \[\lim\limits_{n \to \infty}\frac{g(n)}{f(n)}=\lim\limits_{n \to \infty}\frac{n^l}{n^k}=\lim\limits_{n \to \infty}n^{l-k}=\lim\limits_{n \to \infty}n^{-(-l+k)}=\lim\limits_{n \to \infty}\frac{1}{n^{k-l}} \rightarrow 0\]
 
-since \(n^{k-l} > 1 \Rightarrow n^l \in o(n^k)\)
+since \(n^{k-l} > 1 \Rightarrow n^l \in o(n^k)\).
 
 \end{solution}
 
@@ -39,9 +39,19 @@ Let \(f(n)=n^k\), \(g(n)=n^k+n^l\), \(c=1\). Then
 
 \part Show the following: \(f = O(2^n) \Leftrightarrow f = 2^{O(n)}\)
 
-
 \begin{solution}
-Here goes the solution
+\begin{enumerate}
+\item Let \(f(n)=2^n\), \(g(n)=2^{2n}\). Then
+
+\(2^{2n} \leq c \cdot 2^n \Leftrightarrow 2^n \leq c \text{ } \lightning\) since \(2^n \rightarrow \infty\) for \(n \in \mathbb{N}\).
+
+\item Let \(f(n)=n\), \(g(n)=2^{2n}\), \(c=2\). Then
+
+\(2^{2n} \leq 2^{2 \cdot n}\) applies
+
+\(\Rightarrow f = O(2^n) \not\Leftrightarrow f = 2^{O(n)}\).
+
+\end{enumerate}
 \end{solution}
 
 \end{parts}
