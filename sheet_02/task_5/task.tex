@@ -16,4 +16,7 @@ In the algorithm SELECT, the input elements are divided into groups of 5. Will t
 \item If \(i=k\), then return \(x\). Otherwise, use SELECT recursively to find the \(i\)th smallest element on the low side if \(i<k\), or the \(i-k\)th smallest element on the high side if \(i>k\).
 \(\Rightarrow T(\frac{5n}{7})\)
 \end{enumerate}
+
+\(\Rightarrow\) The algorithm is still in linear time with groups of \(7\), because it is odd and \(\geq 5\).
+\(\Rightarrow\) That is why the algorithm is not in linear time with gorups of \(3\).
 \end{solution}
