@@ -1,22 +1,30 @@
-\question \textbf{Title}
+\question \textbf{Amortized Analysis II}
+
+Let the costs for updating a binary counter be the number of changed bits
 
 \begin{parts}
-\part Question % optional task text
-
-
-\begin{solution}
-Here goes the solution
-\end{solution}
-
-
-\part Question% optional task text
-
+\part  Given a counter that implements only the operation \enquote{increment}. Compute the cost of a single operation in worst, best and average case.
 
 \begin{solution}
-Here goes the solution
+\textbf{Best Case}: \texttt{...XXXX0} $\rightarrow$ \texttt{...XXXX1} a single bit changed
+
+\textbf{Worst Case}: \texttt{1...11111} $\rightarrow$ \texttt{0...00000} a $n$ bits changed
+
+\textbf{Average case}: A counter of length $n$ has $2^n$ increment operations including \texttt{1...11111} $\rightarrow$ \texttt{0...00000}. The first bit changes on every increment, so $2^n$ times. The second bit changes on every second change of the first bit, so $2^n/2=2^{n-1}$ times. The third bit changes on every second change of the first bit, so $2^{n-1}/2=2^{n-2}$.
+
+\begin{equation}
+\text{bitflips}_\text{avg}=\sum\limits_{i=0}^{n-1}\frac{2^{n-i}}{2^n}=\sum\limits_{i=0}^{n-1}\frac{1}{2^i} \label{eq:bitflips_avg}
+\end{equation}
+
+\eqref{eq:bitflips_avg} is the begging of Geometric series:
+\begin{equation}
+\sum\limits_{k=0}^{\infty}q^k=\frac{1}{1-q}
+\end{equation}
+
+So in this case \label{eq:bitflips_avg} will converge towards 2 for $n\rightarrow\infty$.
+
+
+
 \end{solution}
 
 \end{parts}
-
-
-% For tasks without simply remove the \begin{parts}...\part...\end{parts} commands
