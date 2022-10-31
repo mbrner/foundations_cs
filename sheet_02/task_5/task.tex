@@ -1,22 +1,19 @@
-\question \textbf{Title}
+\question \textbf{Analysis of SELECTION algorithm}
 
-\begin{parts}
-\part Question % optional task text
-
-
-\begin{solution}
-Here goes the solution
-\end{solution}
-
-
-\part Question% optional task text
+In the algorithm SELECT, the input elements are divided into groups of 5. Will the algorithm work in linear time if they are divided into groups of 7? Argue that SELECT does not run in linear time if groups of 3 are used.
 
 
 \begin{solution}
-Here goes the solution
+\begin{enumerate}
+\item Divide the \(n\) elements of the input array into \(\left\lfloor\dfrac{n}{7}\right\rfloor\) groups of \(7\) elements each and at most one group made up of the remaining \(n \text{mod} 7\) elements.
+\(\Rightarrow O(n)\)
+\item Find the median of each of the \(\left\lceil\dfrac{n}{7}\right\rceil\) groups by first insertion-sorting the elements of each group (of which there are at most \(7\)) and then picking the median from the sorted list of group elements.
+\(\Rightarrow O(n)\)
+\item Use SELECT recursively to find the median \(x\) of the \(\left\lceil\dfrac{n}{7}\right\rceil\) medians found in (2.)
+\(\Rightarrow T(\left\lceil\dfrac{n}{7}\right\rceil)\)
+\item Partition the input array around the median-of-medians \(x\). Let k be one more than the number of elements on the low side of the partition, so that \(x\) is the \(k\)th smallest element and there are \(n-k\) elements on the high side of the partition.
+\(\Rightarrow O(n)\)
+\item If \(i=k\), then return \(x\). Otherwise, use SELECT recursively to find the \(i\)th smallest element on the low side if \(i<k\), or the \(i-k\)th smallest element on the high side if \(i>k\).
+\(\Rightarrow T(\frac{5n}{7})\)
+\end{enumerate}
 \end{solution}
-
-\end{parts}
-
-
-% For tasks without simply remove the \begin{parts}...\part...\end{parts} commands
