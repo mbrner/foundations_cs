@@ -1,19 +1,36 @@
 \question \textbf{Title}
 
 \begin{parts}
-\part Question % optional task text
+\part Question
+
+Code the following sequence of integers (2, 4, 2, 8, 3, 1, 4, 5, 13, 2) with
+ 
 
 
 \begin{solution}
-Here goes the solution
+unary code:
+01, 0001, 01, 00000001, 001, 1, 0001, 00001, 0000000000001, 01
+Number of bits: 44
+gamma code:
+010, 00100, 010, 0001000, 011, 1, 00100, 00101, 0001101, 010
+Number of bits: 42
+delta code:
+0100, 01100, 0100, 00100000, 0101, 1, 0100, 01101, 00100101, 0100
+Number of bits: 47
+Rice code:
+l=1
+010, 0010, 010, 000010, 011, 1, 0010, 0011, 0000011, 010
+Number of bits: 38
+   
 \end{solution}
 
 
 \part Question% optional task text
-
+The unary encoding shown in the lecture is for strictly positive integers (x ≥ 1). What
+do you need to adapt if you also want allow x = 0 in your integer sequence?
 
 \begin{solution}
-Here goes the solution
+Define $u(x)={0^x}.1$, then u(0)=1
 \end{solution}
 
 \end{parts}
