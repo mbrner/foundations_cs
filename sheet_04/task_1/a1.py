@@ -1,3 +1,5 @@
+from math import floor, ceil
+
 arr = [8, 11, 40, 53,32,33,16,18]
 arr_bin = [bin(a)[2:] for a in arr]
 print(f'{arr_bin=}')
@@ -14,3 +16,20 @@ for i in range(0, len(full), 32):
 print([len(b) for b in W_bits])
 print(f'{W_bits=}')
 print(f'{W=}')
+
+w = 32
+
+for j in range(7,13):
+    r = ((j - 1) % w) + 1
+    idx = ceil(j/w)
+    k = floor(W[idx-1] / 2**(w-r))
+    print(f'{j}: {r=} -> floor(j/w)={idx} -> {k=} -> {k % 2}')
+
+print('===')
+
+    
+for j in range(31,37):
+    r = ((j - 1) % w) + 1
+    idx = ceil(j/w)
+    k = floor(W[idx-1] / 2**(w-r))
+    print(f'{j}: {r=} -> floor(j/w)={idx} -> {k=} -> {k % 2}')
