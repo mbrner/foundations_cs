@@ -6,27 +6,44 @@ Given the same integer sequence from task 1.
 \part Write down the bitvector $B$ and the arrays $P$ and $P'$.
 
 \begin{solution}
-Here goes the solution
+\begin{align*}
+    B=&0001000 | 0001011 | 00000101000 | 00000110101 | 00000100000 | \\
+     &00000100001 | 000010000 | 000010010
+\end{align*}
+
+\begin{align*}
+    j=[1, 4, 7] \\
+    P[j]=[1, 26, 49]
+\end{align*}
+
+\begin{align*}
+    P'[j]=[0, 7, 14, 0, 11, 22, 0, 9]
+\end{align*}
+
 \end{solution}
+
+
 
 \part What are the differences of Dense Pointer to Sampled Pointer data structures?
 
 \begin{solution}
-Here goes the solution
+For Dense Points $l_t$ is precomputed and stored in an additional array $P'$ of length $n$.
+    
 \end{solution}
 
 \part How do you access $A[2] = 11$ and $A[6] = 33$?
 
 
 \begin{solution}
-Here goes the solution
+Same as before but $l_t$ can be directly read from $P'$.
 \end{solution}
 
 \part How many bits are required for this data structure?
 
 
 \begin{solution}
-Here goes the solution
+
+$76+\text{Bits for }P + \text{Bits for }P'$. Assuming 8\,Bits per pointer: $76+3\cdot8+8\cdot8=164$
 \end{solution}
 
 \end{parts}

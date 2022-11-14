@@ -7,28 +7,46 @@ Given the same integer sequence from task 1
 
 
 \begin{solution}
-Here goes the solution
+
+\begin{align*}
+B=&0001000 | 0001011 | 00000101000 | 00000110101 | 00000100000 | \\
+ &00000100001 | 000010000 | 000010010
+\end{align*}
+
 \end{solution}
 
 \part Write down the array $P$ of sampled pointers with $k = 3$ for the bitvector $B$.
 
 
 \begin{solution}
-Here goes the solution
+\begin{align*}
+    j=[1, 4, 7] \\
+    P[j]=[1, 26, 49]
+\end{align*}
 \end{solution}
 
 \part How do you access $A[2] = 11$ and $A[6] = 33$?
 
 
 \begin{solution}
-Here goes the solution
+\begin{equation*}
+    p = P\left[\lceil i/k \rceil\right]+\sum\limits_{t=\left(\lceil  i/k\rceil -1\right)k+1}^{i-1}l_t
+\end{equation*}
+
+For $A[2]=P[1]+\sum\limits_{t=1}^{1}l_t=1+7=8$.
+
+For $A[6]=P[2]+\sum\limits_{t=4}^{5}l_t=26+11+11=48$. 
+
+The $l_t$ values are not known so they have to be computed or the block has to be scanned starting from $P[\lceil i/k \rceil]$ until the numbers $\left(\lceil  i/k\rceil -1\right)k+1$ to $i-1$ are passed.
+
+
 \end{solution}
 
 \part How many bits are required for this data structure?
 
-
 \begin{solution}
-Here goes the solution
+
+$76+\text{Bits for }P$. Assuming 8\,Bits per pointer: $76+3\cdot8=100$
 \end{solution}
 
 \end{parts}
