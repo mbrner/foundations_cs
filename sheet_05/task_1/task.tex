@@ -3,36 +3,33 @@
 \begin{parts}
 \part What does the $\textit{access}(B, i)$ operator do?
 \begin{solution}
-Here goes the solution
+Returns the bit $B[i]$
 \end{solution}
 
-\part What does the $\textit{rank}_1(B, i)$ operator do?
+\part What does the $\textit{rank}_v(B, i)$ operator do?
 \begin{solution}
-Here goes the solution
+Returns the occurrences of bit $v\in\left{0,1\right}$ in $B[i]$ in $B[1,i]$.
 \end{solution}
 
 \part Describe the parameters of $\textit{rank}_1$?
 \begin{solution}
-Here goes the solution
+Bitarray $B$ and the position $i$ up to which the occurrences of bit $v$ are counted.
 \end{solution}
 
 \part What is the difference between $\textit{rank}_0$ and $\textit{rank}_1$?
 \begin{solution}
-Here goes the solution
+The bit $v\in\left{0,1\right}$ which is counted.
 \end{solution}
 
 \part Why do we only need $\textit{rank}_1$ which is also just called $\textit{rank}$?
 \begin{solution}
-Here goes the solution
+Because $\textit{rank}_0(B, i) = i-\textit{rank}_1(B,i)$.
 \end{solution}
 
 \part What does the $\textit{select}_v(B,i)$ operator do?
 
 \begin{solution}
-Here goes the solution
+Returns the position in $B$ of the $j$-th occurrence of bit $v\in\left{0,1\right}$.
 \end{solution}
 
 \end{parts}
-
-
-% For tasks without simply remove the \begin{parts}...\part...\end{parts} commands
