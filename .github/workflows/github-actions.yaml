@@ -15,7 +15,7 @@ jobs:
             sheet_03/assignment_03.tex
             sheet_04/assignment_04.tex
             sheet_05/assignment_05.tex
-            sheet_06/assignment_05.tex
+            sheet_06/assignment_06.tex
           latexmk_use_xelatex: true
           work_in_root_file_dir: true
       - name: Upload PDF file
