@@ -1,0 +1,6 @@
+$cleanup_mode = 1;
+$out_dir = "build";
+$pdflatex = "xelatex";
+$pdf_mode = 1;
+@default_files = ("assignment_06.tex", );
+$clean_ext = "bbl run.xml"
