@@ -1,22 +1,7 @@
-\question \textbf{Title}
+\question \textbf{Hashing}
 
-\begin{parts}
-\part Question % optional task text
-
+Suppose that we are storing a set of $n$ keys into a hash table of size $m$. Show that if the keys are drawn from a universe $U$ with $\lvert U \rvert > nm$, then $U$ has a subset of size $n$ consisting of keys that all hash to the same slot, so that the worst-case searching time for hashing with chaining is $\Theta(n)$.
 
 \begin{solution}
-Here goes the solution
+If the keys are drawn from a universe $U$ with $\lvert U \rvert > nm$, then by the pigeonhole principle there must be a subset of $U$ of size $n$ that all hash to the same slot in the hash table. In the worst-case scenario, all of these keys would be hashed to the same slot, and searching for any of these keys would require looking through the entire linked list at that slot, which would take $\Theta(n)$ time. Therefore, the worst-case searching time for hashing with chaining is $\Theta(n)$.
 \end{solution}
-
-
-\part Question% optional task text
-
-
-\begin{solution}
-Here goes the solution
-\end{solution}
-
-\end{parts}
-
-
-% For tasks without simply remove the \begin{parts}...\part...\end{parts} commands
