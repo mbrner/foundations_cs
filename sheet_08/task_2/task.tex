@@ -1,34 +1,32 @@
-\question \textbf{Title}
-
-\begin{parts}
-\part Question % optional task text
+\question \textbf{Hashing - Linear Probing}
 Consider the two situations in a hash table of size m using open addressing with linear
 probing:
-1. You have n = m/2 keys in the table, where every even-indexed slot is occupied and
+
+\begin{parts}
+\part You have $n = m/2$ keys in the table, where every even-indexed slot is occupied and
 every odd- indexed slot is free.
-2. You have n = m/2 keys in the table and the first n = m/2 locations are the ones
-occupied.
-Compute the average search cost for an unsuccessful search for both situations under the
-assumption of simple uniform hashing.
 
 \begin{solution}
 
-Case 1: 
-The average cost for an unsuccessful search is O(1). If the key hashes to an odd-indexed bucket, the bucket is empty and it is immedeatly clear, that the search is unsuccessful. 
+The average cost for an unsuccessful search is $O(1)$. If the key hashes to an odd-indexed bucket, the bucket is empty and it is immedeatly clear, that the search is unsuccessful. 
 If the key hashes to an even-indexed bucket, we just have to move one bucket until we reach the next empty bucket. Hence we make two moves, which is still in O(1).
-
-Case 2: 
-We compute the average cost of an unsuccessful search by adding the costs of the the empty half to the costs of the occupied half and dividing the term by m.
-For the empty half we only have costs of 1 times m/2. For the occupied half the cost for the search is \(\sum_{i=0}^{m-1} \frac{(m/2)}{(m/2)-i}\).
-Hence the average cost is \(\frac{m/2+\sum_{i=0}^{m/2-1} \frac{(m/2)}{(m/2)-i}}{m}\). 
-This can be refactored to \(1/2+\sum_{i=1}^{m/2}{1/i}\). The latter term is the harmonic series. So the average runtime of lies in \(O(H_m)\), which is \(O(logn)\),
-because \(H_n=log(n)+\gamma+1/2n+\epsilon_n\).
-
-
 
 \end{solution}
 
 
+\part You have $n = m/2$ keys in the table and the first n = m/2 locations are the ones
+occupied.
+Compute the average search cost for an unsuccessful search for both situations under the
+assumption of simple uniform hashing.
+
+
+\begin{solution}
+    We compute the average cost of an unsuccessful search by adding the costs of the the empty half to the costs of the occupied half and dividing the term by m.
+    For the empty half we only have costs of 1 times m/2. For the occupied half the cost for the search is \(\sum_{i=0}^{m-1} \frac{(m/2)}{(m/2)-i}\).
+    Hence the average cost is \(\frac{m/2+\sum_{i=0}^{m/2-1} \frac{(m/2)}{(m/2)-i}}{m}\). 
+    This can be refactored to \(1/2+\sum_{i=1}^{m/2}{1/i}\). The latter term is the harmonic series. So the average runtime of lies in \(O(H_m)\), which is \(O(logn)\),
+    because \(H_n=log(n)+\gamma+1/2n+\epsilon_n\).
+\end{solution}
 
 \end{parts}
 

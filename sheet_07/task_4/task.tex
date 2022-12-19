@@ -13,5 +13,8 @@ Hint: Use Bezout’s lemma. It states that if $a$ and $b$ are nonzero integers w
 
 
 \begin{solution}
-...
+$n/d = k \Leftrightarrow n = k\cdot d$ this also means $\langle d \rangle = \left\{0, 1\cdot d, 2\cdot d,\cdots, (k-1)\cdot d\right\}$. With $(k-1)\cdot d=(n/d-1)\cdot d=n-d$ follows $\langle d \rangle = \left\{0, 1\cdot d, 2\cdot d,\cdots, n-d\right\}$. Now it must still be shown that $\langle a \rangle  = \langle d \rangle$.
+
+If we take any element of the form $a \cdot i \pmod{n}$ and divide it by $d$, the remainder will be the same as if we had divided $a$ by $d$. Therefore, the set of remainders obtained by dividing the elements of $\langle a \rangle$ by $d$ is the same as the set of remainders obtained by dividing $a$ by $d$. This means that $\langle a \rangle = \langle d \rangle$, as claimed in the statement.
+
 \end{solution}
