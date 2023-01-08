@@ -1,19 +1,32 @@
-\question \textbf{Title}
+\question \textbf{Graphs}
+
+Please give short answers (one or two sentences). A directed graph is defined as $D = (V, A)$.
+
 
 \begin{parts}
-\part Question % optional task text
+\part What is $V$ and what is $A$?% optional task text
 
 
 \begin{solution}
-Here goes the solution
+$V$ is a set of vertices and $A$ is a set of arcs.
 \end{solution}
 
 
-\part Question% optional task text
-
+\part What is the difference between a directed graph and a undirected graph?
 
 \begin{solution}
-Here goes the solution
+In a directed graph, the edges (also called arcs) have a direction and are represented by an arrow. In an undirected graph, the edges do not have a direction and are represented simply by a line.
+\end{solution}
+
+
+\part What are the differences between BFS, Dijkstra and Bellman-Ford?
+
+\begin{solution}
+\textbf{BFS (Breadth-First Search)} is an algorithm for traversing or searching a graph in a breadth-first manner. It starts at the tree root (or some arbitrary node of a graph) and explores the neighbor nodes first, before moving to the next level neighbors.
+
+\textbf{Dijkstra's algorithm} is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later.
+
+The \textbf{Bellman-Ford algorithm} is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph. It is slower than Dijkstra's algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers.
 \end{solution}
 
 \end{parts}
