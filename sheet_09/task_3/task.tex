@@ -6,7 +6,25 @@ $$f_k(v) = \text{min}\left\{l(P)\middle|P \text{ is an } s \text{-} v \text{ wal
 
 
 \begin{solution}
-Here goes the solution
+
+A => B 
+Proof by contradiction
+
+A and not B 
+
+not B: $f_n(v)=f_n-1(v)$ 
+This basically means, a longer way does not decrease the weight, hence all edges must have weights >= 0, which is a contradiction to A, that there is a negative cycle!
+
+B=>A 
+Proof by contradiction 
+
+B and not A 
+not A: D has no negatve cycle.
+
+This means $f_n(v)$ < $f_n-1(v)$, so there must be a walk where there are more arc visited and the sum of all weights is smaller than before; hence there must be a negative cycle.
+This is a contradiction to our assumption, that there is no negative cycle. 
+
+
 \end{solution}
 
 
