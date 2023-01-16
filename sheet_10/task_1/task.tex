@@ -1,50 +1,67 @@
 \question \textbf{Title}
 
 \begin{parts}
-\part Question % optional task text
-\begin{itemize}
-\item Is a Network flow directed or undirected?
+\part Is a Network flow directed or undirected?
+
+\begin{solution}
 directed
-\item How is flow defined?
+\end{solution}
+
+\part How is flow defined?
+
+\begin{solution}
 Flow: $f : E \rightarrow R$ + satisfying
 1. Flow conservation constraints $\sum_{e:target(e)=v} f (e) =  \sum_ {e:source(e)=v}f (e), for all v \in V \ {s, t}$
 2. Capacity constraints
 $0 <= f (e) <0 cap(e), for all e \in E$
-\item What is the ”flow conservation constraint”?
-$\sum_{e:target(e)=v} f (e) =  \sum_ {e:source(e)=v}f (e), for all v \in V \ {s, t}$
-\item What is the ”capacity constaint”?
-$0 <= f (e) <0 cap(e), for all e \in E$
-\item In the formula $\sum_{e:target(e)=v}{f(e)} − \sum_{e:source(e)=v}{f(e)}$, what does target(e) and source(e) stand for?
+\end{solution}
 
-Source(e) is the node from which the flow starts, i.e. only outgoing edges
-Target(e) is the node where the flow end, i.e. only incoming edges and no more outgoing 
-
-\item Do you know what the ”maximum flow problem” is?
-max{val(f ) | f is a flow in G}
-\item Do you understand what a ”cut” is?
-Hopefully, A cut is a partition (S, T ) of V , i.e., T = V \ S
-\item What is a ”residual network”?
-
-The residual network G f for a flow f in G = (V , E) indicates the capacity unused by
-f . It is defined as follows:
--G f has the same node set as G.
-- For every edge e = (v , w) in G, there are up to two edges e 0 and e 00 in G f :
-1. if f (e) < cap(e), there is an edge e 0 = (v , w) in G f with residual capacity
-r (e 0 ) = cap(e) - f (e).
-2. if f (e) > 0, there is an edge e 00 = (w, v ) in G f with residual capacity r (e 00 ) =
-f (e).
-\end{itemize}
+\part What is the "flow conservation constraint"?
 
 \begin{solution}
-Here goes the solution
+    $\sum_{e:target(e)=v} f (e) =  \sum_ {e:source(e)=v}f (e), for all v \in V \ {s, t}$
+\end{solution}
+
+\part What is the "capacity constaint"?
+
+\begin{solution}
+    $0 <= f (e) <0 cap(e), for all e \in E$
+
 \end{solution}
 
 
-\part Question% optional task text
-
+\part In the formula $\sum_{e:target(e)=v}{f(e)} − \sum_{e:source(e)=v}{f(e)}$, what does target(e) and source(e) stand for?
 
 \begin{solution}
-Here goes the solution
+Source(e) is the node from which the flow starts, i.e. only outgoing edges
+
+Target(e) is the node where the flow end, i.e. only incoming edges and no more outgoing 
+\end{solution}
+
+\part Do you know what the "maximum flow problem" is?
+
+\begin{solution}
+max{val(f ) | f is a flow in G}
+\end{solution}
+
+\part Do you understand what a "cut" is?
+
+\begin{solution}
+    Hopefully, A cut is a partition (S, T ) of V , i.e., T = V \ S
+\end{solution}
+
+\part What is a "residual network"?
+
+\begin{solution}
+
+    The residual network G f for a flow f in G = (V , E) indicates the capacity unused by
+    f . It is defined as follows:
+    -G f has the same node set as G.
+    - For every edge e = (v , w) in G, there are up to two edges e 0 and e 00 in G f :
+    1. if f (e) < cap(e), there is an edge e 0 = (v , w) in G f with residual capacity
+    r (e 0 ) = cap(e) - f (e).
+    2. if f (e) > 0, there is an edge e 00 = (w, v ) in G f with residual capacity r (e 00 ) =
+    f (e).
 \end{solution}
 
 \end{parts}
