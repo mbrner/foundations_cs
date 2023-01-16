@@ -1,22 +1,26 @@
-\question \textbf{Title}
+\question \textbf{ Max-Flow Min-Cut Theorem}
 
-\begin{parts}
-\part Question % optional task text
+Prove the Theorem:
+For a network $(V, E, s, t)$ with capacities cap : $E \rightarrow R_+$ the maximum value of a flow is equal to the minimum capacity of an $(s, t)$-cut:
+$$\max\{\text{val}(f) | f \text{ is a flow}\} = \min\{\text{cap}(S, T) | (S, T) \text{ is an }(s, t)\text{-cut}\}$$
 
-
-\begin{solution}
-Here goes the solution
-\end{solution}
-
-
-\part Question% optional task text
-
+\begin{enumerate}
+\item $f$ is a maximum flow.
+\item The residual network $G_f$ contains no augmenting path.
+\item $\text{val}(f) = \text{cap}(S, T)$ for some cut $(S, T)$ of $G$
+\end{enumerate}
 
 \begin{solution}
-Here goes the solution
-\end{solution}
+\begin{itemize}
+\item $1. \rightarrow 2.$: If there were an augmentating path in $G_f$ then $f$ was not a maximum flow
+\item $2. \rightarrow 3.$: Create a cut$(S,T)$ in which $S$ contains all nodes reachable from $s$ in $G_f$ and assign the rest to $T$. Then $c(S,T)-|f|=0$ (if not, then $T$ would have been reachable after all). Then for this cut $|f|=c(S,T)$
+\item $3. \rightarrow 1.$: If $f$ were not maximum, one could increase it. Since $f$ is at most the capacity of any cut, then for at least one cut the capacity is not yet used; furthermore, $|f|=c(S,T)$ for no cut, since otherwise there would be an augmenting path to increase the flow and the flow would be maximum.
+\end{itemize}
 
-\end{parts}
+This shows that the maximum flow is equal to the minimum cut: because of 3, it has the size of at least one cut, hence at least the size of the smallest cut, and because of 2, it also has at most this value, since the residual network cannot contain an augmenting path once $|f|$ has reached the size of the smallest cut.
+
+
+\end{solution}
 
 
 % For tasks without simply remove the \begin{parts}...\part...\end{parts} commands
