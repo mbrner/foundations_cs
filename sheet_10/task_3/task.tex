@@ -2,10 +2,24 @@
 
 \begin{parts}
 \part Question % optional task text
-
+a In a more general max-flow problem, there are many sources and sinks, and we wish
+to maximize the total flow from all sources to all sinks. Show how to reduce the more
+general problem to the original max-flow problem.
+b Assume a flow network with edge and additional vertex capacities. Each vertex v has a
+limit on the flow that can pass through it. Explain how to transform this flow network
+into an equivalent flow network without vertex capacities.
 
 \begin{solution}
-Here goes the solution
+a\\
+
+To maximize the flow from all sources to all sinks we can add another source as well as another sink to the graph, which both have the infinite capacity.
+
+b\\
+
+To get rid of the capacities assigned to vertexes we can just split each vertex, to which a capacity is assigned, into one incoming node and one outgoing node. 
+We then link both nodes with an edge to which we assign the capacity of the vertext we just split up 
+
+
 \end{solution}
 
 
