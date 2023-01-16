@@ -11,5 +11,13 @@ Given the following instance of a Knapsack problem with 4 items with weight $w_i
     \end{tabular}
 
 \begin{solution}
-Here goes the solution
+
+
+\includegraphics[width=0.8\linewidth]{task_5/Task_5.png}
+
+As shown in the Graphic there is a grid like graph in which the cloumns represent the reached capacity and the rows represent the items.
+If an item is chosen, we draw an edge to reached weight and label it with the negative value. From all nodes we also draw an edge reaching the end node with a value of 0.
+We then calculate the shortest path using Bellman Ford. 
+
+
 \end{solution}
