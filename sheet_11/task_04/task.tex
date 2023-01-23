@@ -3,5 +3,13 @@
 Prove that every \textit{maximal} matching in a graph $G$ has size at least half the size of a \textit{maximum} matching
 
 \begin{solution}
-Here goes the solution
+
+    A maximal matching in a graph is a matching that is not a proper subset of any other matching. A maximum matching is a matching with the largest possible number of edges.
+
+    To prove that every maximal matching in a graph G has size at least half the size of a maximum matching, we will show that if a maximal matching has less than half the size of a maximum matching, then it is not maximal.
+    
+    Assume for the sake of contradiction that there exists a maximal matching M in G with less than half the size of a maximum matching. Let E' be the set of edges not included in M. Since M is a maximal matching, every edge in E' is not incident to any vertex in M. Therefore, every vertex in E' has at least one unmatched endpoint. Since M is less than half the size of a maximum matching, there must be at least as many unmatched vertices in E' as there are matched vertices in M.
+    
+    Let e be an arbitrary edge in E' and let u and v be its endpoints. Since u and v are unmatched in M, they must be unmatched in E'. Therefore, we can add e to M to create a new matching M' that is larger than M. However, since M is maximal, this is a contradiction. Therefore, every maximal matching in a graph G has size at least half the size of a maximum matching.
+    
 \end{solution}
