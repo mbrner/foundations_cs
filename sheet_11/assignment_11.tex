@@ -1,0 +1,56 @@
+%Example of use of oxmathproblems latex class for problem sheets
+\documentclass[12pt,a4paper,ngerman]{exam} 
+\printanswers
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{fontspec}
+\usepackage{fancyvrb}
+\usepackage{tikz-qtree}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{csquotes}
+\usepackage{stmaryrd}
+\usetikzlibrary{arrows ,automata ,positioning}
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+\newcommand{\typen}{Janine Ponzer, Leonard Eckhoff, Mathis Börner}
+\newcommand{\fach}{Foundations Computer Science WS22/23}
+\renewcommand{\solutiontitle}{\noindent\textbf{Answer:}%
+\enspace}
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{}{}{\typen \\ \fach}
+\runningheader{}{}{\typen \\ \fach}
+\firstpagefooter{}{}{\thepage\,/\,\numpages}
+\runningfooter{}{}{\thepage\,/\,\numpages}
+
+
+\DeclareSIUnit \basepair {bp}
+\DeclareSIUnit\thomson{Th}
+
+\begin{document}
+\section*{Assignment 11}
+\begin{questions}
+
+    \input{task_01/task.tex}
+    \input{task_02/task.tex}
+    \input{task_03/task.tex}
+    \input{task_04/task.tex}
+    \input{task_05/task.tex}
+%<task1>
+%<task2>
+%<task3>
+%<task4>
+%<task5>
+%<task6>
+%<task7>
+%<task8>
+%<task9>
+
+\end{questions}
+\end{document}
